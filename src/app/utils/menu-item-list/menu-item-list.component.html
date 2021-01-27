@@ -1,0 +1,10 @@
+<mat-expansion-panel >
+  <mat-expansion-panel-header >
+    <div class="sidenav-item-icon sidenav-item">
+      <mat-icon>{{items.header.icon}}</mat-icon> <span>{{items.header.title}}</span>
+    </div>
+  </mat-expansion-panel-header>
+
+  <app-menu-item *ngFor="let item of items.list" [item]="item"></app-menu-item>
+
+</mat-expansion-panel>

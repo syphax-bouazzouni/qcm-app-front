@@ -1,0 +1,141 @@
+<div>
+  <header>
+    <app-header [showProfile]="false" [showToggle]="false"></app-header>
+  </header>
+  <main class="quiz-filters-container">
+   <app-quiz-instrcutions></app-quiz-instrcutions>
+    <form method="POST" action="https://siamois.co/exams/student/start-revision/generalites-anatomie"
+          accept-charset="UTF-8">
+          <!--<input name="_token" type="hidden" value="x1izSw5zFunFfOatmsmAFbA1aZKmoc0NkjbwL2HS">-->
+      <div class="quiz-filters-form">
+        <div class="quiz-filters-type">
+          <h6>
+            Type de questions :
+          </h6>
+          <div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="radio" value="1" checked id="radio">
+              <label class="custom-control-label" for="radio">Questions à choix unique (QCU)</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" name="checkbox" class="custom-control-input" value="1" id="checkbox" checked>
+              <label class="custom-control-label" for="checkbox">Questions à choix multiples (QCM)</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="descriptive" name="para" value="1" checked>
+              <label class="custom-control-label" for="descriptive">Cas cliniques (CCQCM)</label>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-filters-difficulty">
+          <h6>
+            Difficulté :
+          </h6>
+          <div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" checked id="easy" name="easy">
+              <label class="custom-control-label" for="easy">Facile</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" checked id="medium" name="medium">
+              <label class="custom-control-label" for="medium">Moyen</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" checked id="hard" name="hard">
+              <label class="custom-control-label" for="hard">Difficile</label>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-filters-source">
+          <h6>
+            Source :
+          </h6>
+          <div>
+            <div class="custom-control custom-checkbox">
+              <input [(ngModel)]="tagsIgnored" id="ignore_tags" name="ignore_tags" value="1" type="checkbox" class="custom-control-input">
+              <label class="custom-control-label" for="ignore_tags">Toutes les sources</label>
+            </div>
+          </div>
+          <div [ngStyle]="{visibility: (tagsIgnored?'hidden':'visible')}" id="all_tags">
+            <h6>
+              Spécifier la source :
+            </h6>
+            <div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tag0" name="Siamois" value="1">
+                <label class="custom-control-label" for="tag0">
+                  Siamois</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tag1" name="Résidanat-Alger" value="1">
+                <label class="custom-control-label" for="tag1">
+                  Résidanat Alger</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tag2" name="Résidanat-Oran" value="1">
+                <label class="custom-control-label" for="tag2">
+                  Résidanat Oran</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tag3" name="Résidanat-Annaba" value="1">
+                <label class="custom-control-label" for="tag3">
+                  Résidanat Annaba</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tag4" name="Résidanat-Blida" value="1">
+                <label class="custom-control-label" for="tag4">
+                  Résidanat Blida</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tag5" name="Résidanat-Constantine" value="1">
+                <label class="custom-control-label" for="tag5">
+                  Résidanat Constantine</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tag6" name="Externat-Alger" value="1">
+                <label class="custom-control-label" for="tag6">
+                  Externat Alger</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="tag7" name="Résidanat-Tlemcen" value="1">
+                <label class="custom-control-label" for="tag7">
+                  Résidanat Tlemcen</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-filters-preference">
+          <h6>
+            Préférences:
+          </h6>
+          <div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="not_answered" name="not_answered">
+              <label class="custom-control-label" for="not_answered">Questions non consultées</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="wrong_answer" name="wrong_answer">
+              <label for="wrong_answer" class="custom-control-label">Questions déjà fausses
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="with_explanation" name="with_explanation">
+              <label for="with_explanation" class="custom-control-label">Questions avec explications seulement
+              </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="personal_notes_only" name="personal_notes_only">
+              <label for="personal_notes_only" class="custom-control-label">Questions avec notes personnelles
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="lead">
+        <button [disabled]="nbQuestions==0"  routerLink="test" id="start-exam" class="btn btn-primary default btn-block mb-1" role="button">Commencer l&#039;examen (<span id="nb_questions">{{nbQuestions}}</span> questions)</button>
+      </p>
+    </form>
+  </main>
+</div>
+

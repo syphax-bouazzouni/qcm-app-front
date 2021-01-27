@@ -1,0 +1,37 @@
+.path-container{
+  display: flex;
+  padding: 20px 15px;
+  align-items: baseline;
+  h1{
+    font-size: 1.75rem;
+    padding-bottom: 10px
+  }
+  .path-nav{
+    display: flex;
+    align-items: center;
+    padding: .75rem 1rem;
+
+
+    .path-nav-item{
+      &:before{
+        display: inline-block;
+        padding-right: .5rem;
+        padding-left: .5rem;
+        color: #6c757d;
+        content: "|";
+      }
+      &:first-of-type:before{
+        content: '';
+        display: none;
+      }
+      &:last-of-type{
+        color: #6c757d;
+      }
+    }
+  }
+}
+
+.item-icon{
+  display: inline-flex;
+  align-items: flex-end;
+}

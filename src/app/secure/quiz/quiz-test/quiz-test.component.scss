@@ -1,0 +1,27 @@
+
+.quiz-question-propositions{
+  position: relative;
+  padding: 1.75rem;
+  font-size: 1.15rem;
+  .quiz-question{
+    padding: .25rem;
+    line-height: 1.5;
+  }
+  .quiz-question-source{
+    display: inline-block;
+    padding: .6em 1.25em;
+    font-size: 74%;
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    border-radius: 10rem;
+    margin-bottom: .25rem;
+  }
+
+  .quiz-propositions{
+    height: 35vh;
+    padding: 2px 5px;
+    overflow-y: scroll;
+  }
+
+}

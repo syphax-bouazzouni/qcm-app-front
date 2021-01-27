@@ -1,0 +1,50 @@
+<div class="quiz-header">
+  <mat-select class="quiz-header-nb-pages" value="10" >
+    <mat-option value="5">5</mat-option>
+    <mat-option value="10">10</mat-option>
+    <mat-option value="20">20</mat-option>
+  </mat-select>
+  <label class="quiz-header-search">
+    <input placeholder="chercher ..." type="text">
+  </label>
+</div>
+<div>
+  <mat-card class="quiz-card">
+      <div class="quiz-card-index">
+        <app-btn-radius class="dark-blue" text="1"></app-btn-radius>
+      </div>
+      <div class="quiz-card-title">
+        <a href="#" (click)="$event.preventDefault() ; openQuiz()" >Medicaments</a>
+      </div>
+      <div class="quiz-card-nb-questions">147</div>
+      <div class="quiz-card-start-btn">
+        <button (click)="openQuiz()">Commencer la revision</button>
+      </div>
+  </mat-card>
+  <mat-card class="quiz-card">
+      <div class="quiz-card-index">
+        <app-btn-radius class="dark-blue" text="2"></app-btn-radius>
+      </div>
+      <div class="quiz-card-title">
+        <a href=""> Medicaments</a>
+
+      </div>
+      <div class="quiz-card-nb-questions">147</div>
+      <div class="quiz-card-start-btn">
+        <button>Commencer la revision</button>
+      </div>
+  </mat-card>
+  <mat-card class="quiz-card">
+      <div class="quiz-card-index">
+        <app-btn-radius class="dark-blue" text="3"></app-btn-radius>
+      </div>
+      <div class="quiz-card-title">
+        <a href=""> Medicaments</a>
+
+      </div>
+      <div class="quiz-card-nb-questions">147</div>
+      <div class="quiz-card-start-btn">
+        <button>Commencer la revision</button>
+      </div>
+  </mat-card>
+</div>

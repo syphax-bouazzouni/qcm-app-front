@@ -1,0 +1,21 @@
+.quiz-timer{
+  width: 193px;
+  color: #fff;
+
+  line-height: 1.5;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: .05rem;
+  padding: .75rem 2.6rem .6rem;
+  transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out;
+}
+
+.quiz-timer-default{
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.quiz-timer-late{
+  background-color: #dc3545;
+  border-color: #dc3545;
+}

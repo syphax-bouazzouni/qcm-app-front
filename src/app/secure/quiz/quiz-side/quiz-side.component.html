@@ -1,0 +1,36 @@
+<div class="progression-card">
+  <div class="progression-card-test-pages">
+    <h2>{{isSaved? 'Correction' : 'Progression'}}</h2>
+    <div class="test-pages-container">
+        <div class="test-page" *ngFor="let index of getIndexes()">
+          <button [class]="stateCass[index]"
+                  [class.active]="index === currentIndex" (click)="goToTest(index)">
+            {{index+1}}
+          </button>
+        </div>
+        <div class="test-page" *ngIf="quiz.nbQuestions>5"><button>+</button></div>
+    </div>
+  </div>
+  <hr>
+  <div class="progression-card-statistics">
+      <h2>Récapitulatif</h2>
+      <div class="statistics-container">
+        <a class="statistics-card" href="#">
+          <h5>{{progression.success}}</h5>
+          <p>Juste</p>
+        </a>
+        <a class="statistics-card" href="#">
+          <h5>{{progression.error}}</h5>
+          <p>Fausse</p>
+        </a>
+        <a class="statistics-card" href="#">
+          <h5>{{progression.notRespond}}</h5>
+          <p>Sans réponse</p>
+        </a>
+        <a class="statistics-card" href="#">
+          <h5>{{progression.rest}}</h5>
+          <p>Non visitée</p>
+        </a>
+      </div>
+  </div>
+</div>

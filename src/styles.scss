@@ -1,1 +1,245 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/scss/bootstrap";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~alertifyjs/build/css/alertify.min.css';
+@import '~alertifyjs/build/css/themes/bootstrap.min.css';
+@import "./app/alertify";
+
+:root {
+  --theme-color-1: #145388;
+  --theme-color-2: #2a93d5;
+  --theme-color-3: #6c90a1;
+  --theme-color-4: #365573;
+  --theme-color-5: #47799a;
+  --theme-color-6: #8e9599;
+  --theme-color-1-10: rgba(20,83,136,.1);
+  --theme-color-2-10: rgba(42,147,213,.1);
+  --theme-color-3-10: rgba(108,144,161,.1);
+  --theme-color-4-10: rgba(54,85,115,.1);
+  --theme-color-5-10: rgba(71,121,154,.1);
+  --theme-color-6-10: hsla(202,5%,58%,.1);
+  --primary-color: #212121;
+  --foreground-color: #fff;
+  --separator-color: #d7d7d7;
+
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html {
+  width: 100%;
+}
+html {
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+}
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+a{
+  text-decoration: none!important;
+}
+body {
+  overflow-x: hidden!important;
+}
+body {
+  font-family: Nunito, sans-serif;
+  font-size: .8rem;
+  font-weight: 400;
+  color: #212121;
+  margin: 0;
+
+}
+
+li{
+  list-style: none;
+}
+button:focus{
+  outline: none;
+}
+
+.form-group{
+  @extend .has-top-label;
+  display: block !important;
+  input{
+    padding: 2.5rem 0.75rem 1rem !important;
+  }
+}
+
+.has-top-label {
+  display: block;
+  position: relative;
+  & > span:last-of-type{
+    position: absolute;
+    cursor: text;
+    font-size: 76%;
+    opacity: 0.7;
+    top: 0.7rem;
+    left: 0.75rem;
+    z-index: 3;
+    line-height: 1;
+    padding: 0 1px;
+    font-weight: 600;
+  }
+}
+.form-captcha {
+  margin: 1rem auto;
+}
+
+
+
+
+
+.btn-social{
+  @extend .btn;
+  @extend .btn-lg;
+  display: flex;
+  margin: .5rem 0;
+  padding-left: 4rem;
+  cursor: pointer;
+  border-width: 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0 1px rgba(0,0,0,0.05);
+  width: 100%;
+  .btn-logo{
+    display: block;
+    margin: 0 .5rem;
+    padding: 0;
+    img{
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+
+
+.btn-xs {
+  padding: .25rem .75rem;
+  font-size: .76rem;
+  line-height: 1.3
+}
+
+.blue-gradient-container{
+  background: linear-gradient(0deg, #0182d6, #00345e);
+  display: flex;
+  min-height: 100vh;
+}
+.app-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+  border-radius: .75rem;
+  width: 40%;
+  margin: 5rem auto;
+  padding: 2rem 3rem;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,0.125);
+}
+
+.app-card-container{
+  margin: auto;
+  text-align: center;
+}
+.app-card-header{
+  margin: 2rem auto;
+  text-align: center;
+}
+.app-card-text{
+  margin: 2rem auto;
+  text-align: center;
+}
+
+
+/*
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+*/
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-expansion-panel-content{
+  .mat-expansion-panel-body {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+}
+
+
+.mat-expansion-panel-header {
+  padding: 0 16px !important;
+  font-size: 16px;
+}
+
+a{
+  color: #212121;
+  transition: color .2s;
+  &:hover{
+    text-decoration: initial;
+    color: #145388;
+  }
+}
+
+

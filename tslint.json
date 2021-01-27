@@ -4,6 +4,7 @@
     "codelyzer"
   ],
   "rules": {
+    "semicolon":false,
     "align": {
       "options": [
         "parameters",
@@ -68,11 +69,6 @@
       true,
       "single"
     ],
-    "semicolon": {
-      "options": [
-        "always"
-      ]
-    },
     "space-before-function-paren": {
       "options": {
         "anonymous": "never",

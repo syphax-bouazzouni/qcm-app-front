@@ -1,0 +1,24 @@
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none !important;
+}
+
+.sidenav-item-icon{
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.toggled{
+  background: rgba(0,0,0,.04);
+}
+.sidenav-item{
+  color: #565656;
+  line-height: 1.45;
+  transition: padding .35s ease 0s!important;
+  &:hover{
+    padding-left: 10px;
+  }
+}
+
+
+

@@ -1,0 +1,12 @@
+@import "src/app/vars";
+
+.btn-facebook{
+  background-color: #1877f2;
+  border-color: #1877f2;
+  color: #fff;
+  &:hover{
+    background-color: #1069dc;
+    border-color: #1069dc;
+    color:#fff;
+  }
+}

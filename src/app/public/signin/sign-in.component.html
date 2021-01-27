@@ -1,0 +1,30 @@
+<div class="blue-gradient-container">
+  <div class="app-card">
+
+    <app-logo height="35px" width="110px" [white]="false"></app-logo>
+    <h3 class="login-welcome">Bienvenue ! </h3>
+
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <app-form-field label="EMAIL" name="email" ></app-form-field>
+      <app-form-field label="MOT DE PASSE" name="password" type="password" ></app-form-field>
+
+      <div class="d-flex">
+        <a routerLink="/password-reset" >
+          <button type="button" class="ml-5 btn-round btn-outline-primary btn-xs mb-1">Mot de passe oublié ?</button>
+        </a>
+      </div>
+
+      <app-btn-primary class="primary" text="LOGIN" type="submit"></app-btn-primary>
+
+    </form>
+    <hr>
+    <app-btn-facebook (clicked)="connected($event)"></app-btn-facebook>
+    <app-btn-google (clicked)="connected($event)"></app-btn-google>
+    <div class="text-center">
+      <a class="btn btn-link btn-lg mt-2"  routerLink="/register">Vous n'avez pas  un compte?</a>
+    </div>
+
+  </div>
+
+
+</div>

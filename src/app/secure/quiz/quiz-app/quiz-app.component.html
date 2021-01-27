@@ -1,0 +1,20 @@
+<div>
+  <header>
+    <app-header [showTestController]="true" [showProfile]="false" [showToggle]="false"
+        (paused)="main.pause(); onPause()"
+                (finished)="main.finish()"
+        (restart)="main.restart()"
+    >
+
+    </app-header>
+  </header>
+  <div class="quiz-app-container" [class.blur-ui]="paused">
+    <main>
+      <app-quiz-main #main></app-quiz-main>
+    </main>
+    <aside>
+      <app-quiz-side></app-quiz-side>
+    </aside>
+  </div>
+
+</div>

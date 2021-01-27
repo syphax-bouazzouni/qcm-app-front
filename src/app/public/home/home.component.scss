@@ -1,0 +1,91 @@
+@import "src/app/vars";
+@import "src/app/utils";
+
+
+.home{
+  background: transparent url("/assets/img/home-background-blue.png") no-repeat;
+  background-position-y: 0;
+  height: 1440px;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #8f8f8f;
+
+}
+
+.nav-bar{
+  display: flex;
+  flex-wrap: wrap;
+  height: 120px;
+  align-items: center;
+  justify-content:space-between;
+  margin: auto 0;
+
+
+  .nav-links{
+    display: flex;
+    flex: 1;
+    color: #fff;
+    font-family: Nunito,sans-serif;
+    font-size: 1rem;
+    li{
+      height: 100%;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      position: relative;
+      list-style: none;
+      transition: color .2s;
+      a:hover{
+        opacity: .8;
+      }
+    }
+
+    .nav-btn{
+      @extend .btn-outline-semi-light;
+      border-radius: 50px;
+      padding: .75rem 1.75rem;
+      height: 90px;
+      position: relative;
+      transition: color .15s ease-in-out,background-color .15s ease-in-out,
+      border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      &:hover{
+        @extend .btn-outline-semi-dark;
+      }
+    }
+  }
+}
+
+.banner{
+  display: flex;
+  .banner-text {
+    margin-top: 40px;
+    padding-right: 7rem;
+    min-width: 40%;
+    h1{
+      font-size: 3rem;
+      line-height: 3.2rem;
+      color: #fff
+    }
+    p{
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+  }
+
+  .banner-img{
+
+  }
+
+}
+
+@media (max-width: 1439px) {
+  .nav-bar {
+    height: 110px;
+  }
+}
+
+

@@ -1,0 +1,38 @@
+<div>
+  <header>
+    <app-header [showProfile]="false" [showToggle]="false"></app-header>
+  </header>
+  <main class="quiz-result-container">
+    <div class="quiz-result-header {{(success?'success':'error')}}">
+        {{headerText}}
+    </div>
+    <div class="quiz-result-body">
+      <h1>
+        Résultats de Généralités
+      </h1>
+      <div class="statistics-container">
+        <div class="statistics-card">
+          <span>Score</span>
+          <div>
+            <app-progress-circle [value]="progression.success / nbQuestions">
+              {{progression.success}} / {{nbQuestions}}
+            </app-progress-circle>
+          </div>
+        </div>
+          <div> </div>
+        <div class="statistics-card">
+          <span>Pourcentage</span>
+          <div>
+            <app-progress-circle [value]="progression.success / nbQuestions">
+              {{(progression.success / nbQuestions)  * 100 | number:'1.0-2' }} %
+            </app-progress-circle>
+          </div>
+        </div>
+      </div>
+      <a routerLink="/quiz/test">
+          Voir la correction
+      </a>
+    </div>
+  </main>
+</div>
+

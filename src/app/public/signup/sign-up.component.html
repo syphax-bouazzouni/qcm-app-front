@@ -1,0 +1,33 @@
+<div class="blue-gradient-container">
+  <div class="app-card">
+
+    <app-logo height="35px" width="110px" [white]="false"></app-logo>
+    <app-btn-facebook (clicked)="connected($event)"></app-btn-facebook>
+    <app-btn-google (clicked)="connected($event)"></app-btn-google>
+
+
+
+    <form class="login-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <app-form-field label="NOM COMPLET" name="name"></app-form-field>
+      <app-form-field label="PSEUDO" name="username"></app-form-field>
+      <app-form-field label="EMAIL" name="email"></app-form-field>
+      <app-form-field label="MOT DE PASSE" name="password" type="password"></app-form-field>
+      <app-form-field label="CONFIRMATION DU MOT DE PASSE" name="password_confirmation" type="password"></app-form-field>
+
+      <div class="form-captcha">
+        <re-captcha (resolved)="resolved($event)"
+                    formControlName="captcha"
+                    [siteKey]="captchakey">
+        </re-captcha>
+      </div>
+
+      <app-btn-primary  class="success" text="INSCRIPTION" type="submit"></app-btn-primary>
+    </form>
+    <div class="text-center">
+      <a class="btn btn-link btn-lg mt-2"  routerLink="/login">Vous avez déjà un compte?</a>
+    </div>
+
+  </div>
+
+
+</div>

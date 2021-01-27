@@ -1,0 +1,45 @@
+<div class="app-header">
+  <div class="app-header-menu-bar" *ngIf="showToggle">
+    <a
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="toggled.emit()"
+    >
+
+      <svg class="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 17">
+        <rect x="0.48" y="0.5" width="7" height="1" />
+        <rect x="0.48" y="7.5" width="7" height="1" />
+        <rect x="0.48" y="15.5" width="7" height="1" />
+      </svg>
+      <svg class="sub" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17">
+        <rect x="1.56" y="0.5" width="16" height="1" />
+        <rect x="1.56" y="7.5" width="16" height="1" />
+        <rect x="1.56" y="15.5" width="16" height="1" />
+      </svg>
+    </a>
+  </div>
+
+  <div class="app-header-logo">
+    <app-logo height="40px" width="160px" [white]="false"></app-logo>
+  </div>
+
+  <div class="app-header-profile" *ngIf="showProfile">
+    <div class="dropdown ">
+      <div class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span>{{user.name}}</span>
+        <img src="../../assets/img/default-profile-img.png" alt="profile image">
+      </div>
+      <div class="dropdown-menu">
+        <button class="dropdown-item" (click)="signOut()">Se déconnecter</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-header-controllers" *ngIf="showTestController">
+    <button (click)="onPause()" class="btn-pause">{{isPaused?'Reprendre':'Pause'}}</button>
+    <button (click)="restart.emit()" class="btn-restart">Recommencer</button>
+    <button (click)="finished.emit()" class="btn-finish">Terminer et enregistrer</button>
+  </div>
+
+</div>

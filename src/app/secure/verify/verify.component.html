@@ -1,0 +1,14 @@
+<div class="blue-gradient-container">
+  <div class="app-card">
+    <app-logo height="35px" width="110px" [white]="false"></app-logo>
+    <div class="app-card-container">
+      <h3 class="app-card-header">Veuillez confirmer votre adresse email </h3>
+      <p class="app-card-text">
+        Un email de confirmation vous a été envoyée , Merci d'aller verifier votre email et cliquer sur le boutton <b>Confimer</b>
+        et ensuite revenir vous connecter
+      </p>
+    </div>
+
+    <app-btn-primary class="primary" (clicked)="goToLogin()" text="LOGIN"></app-btn-primary>
+  </div>
+</div>

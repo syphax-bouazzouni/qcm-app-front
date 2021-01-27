@@ -1,0 +1,42 @@
+:host{
+  flex-basis:22%;
+  margin: 5px;
+}
+.module-card{
+  padding: 0;
+  box-shadow: 0 3px 30px rgba(0,0,0,.1), 0 3px 20px rgba(0,0,0,.1);
+  border-radius: .75rem;
+  .module-card-header {
+    padding: 0;
+    transition: opacity .35s ease 0s;
+    img{
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  .module-card-footer{
+    padding: 1.75rem 1.75rem .5rem;
+    h3{
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.3rem;
+      font-family: Nunito,sans-serif;
+    }
+    p{
+      color: #909090;
+      font-size: .76rem;
+      line-height: .9rem;
+      font-weight: 300
+    }
+  }
+
+  &:hover{
+    .module-card-header{
+      opacity: 0.4;
+    }
+    .module-card-footer{
+      text-decoration: initial;
+      color: #145388;
+    }
+  }
+}

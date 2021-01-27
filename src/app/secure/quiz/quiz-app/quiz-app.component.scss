@@ -1,0 +1,16 @@
+.quiz-app-container{
+  display: flex;
+  padding-top: 115px;
+  main{
+    flex-basis: 70%;
+  }
+
+  aside{
+    flex-basis: 28%;
+  }
+}
+
+.blur-ui {
+  filter: blur(2px);
+  pointer-events: none;
+}

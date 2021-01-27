@@ -1,0 +1,32 @@
+:host(.active){
+  .quiz-proposition{
+    background-color: #d5f3fe;
+  }
+}
+:host(.error){
+  .quiz-proposition{
+    background-color: rgb(255, 176, 189);
+  }
+}
+
+:host(.success){
+  .quiz-proposition{
+    background-color: rgb(146, 235, 124);
+  }
+}
+
+
+.quiz-proposition{
+  display: flex;
+  padding: .5rem;
+  cursor: pointer;
+  margin-bottom: .5rem;
+  align-items: center;
+  transition: background-color 0.15s ease-in-out;
+
+  span:last-of-type{
+    padding-left: .5rem;
+    padding-right: .5rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,13 @@
+
+.sidenav-item-icon{
+  display: inline-flex;
+  align-items: flex-end;
+}
+.sidenav-item{
+  color: #565656;
+  line-height: 1.45;
+  transition: padding .35s ease 0s!important;
+  &:hover{
+    padding-left: 10px;
+  }
+}

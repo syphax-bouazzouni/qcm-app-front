@@ -1,0 +1,35 @@
+<div class="home">
+  <div class="container">
+    <nav class="nav-bar">
+      <app-logo height="40px" width="160px"></app-logo>
+      <div>
+        <ul class="nav-links">
+          <li><a>Tarifs</a></li>
+          <li class="">
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle nav-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Mon Compte </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" routerLink="/register">Créer un Compte</a>
+                <a class="dropdown-item" routerLink="/login">Se connecter</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+    <div class="banner">
+      <div class="banner-text">
+        <h1 class="display-1">La première plateforme de QCM Médecine en Algérie</h1>
+        <p>Rejoignez plus de 15000 étudiants en médecine qui ont réussi grâce à notre solution et accédez à plus de 60000 questions avec des explications de nos experts.
+          Nous espèrons que vous l'apprécierez !</p>
+
+        <app-btn-primary class="success" text="Essayer Maintenant" (clicked)="goToApp()"></app-btn-primary>
+      </div>
+      <div class="banner-img">
+        <img src="../../../assets/img/home-hero.png" alt="home-hero">
+      </div>
+    </div>
+  </div>
+
+</div>

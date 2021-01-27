@@ -1,0 +1,8 @@
+<li class="quiz-proposition" (click)="$event.preventDefault();onClick()">
+  <span>
+    <app-btn-radius class="light-blue"  [state]="getState()" text="{{getAlphabeticIndex()}}"></app-btn-radius>
+  </span>
+  <a href="">
+    <ng-content></ng-content>
+  </a>
+</li>

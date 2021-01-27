@@ -1,0 +1,81 @@
+.progression-card{
+  @extend .card;
+  height: 100%;
+  .progression-card-test-pages{
+    height: 250px;
+    padding-right: 15px;
+    .test-pages-container{
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      .test-page{
+        margin: .25rem;
+        flex-basis: 17%;
+        width: 100%;
+        button{
+          border-radius: .1rem;
+          padding: .75rem .5rem;
+          font-size: 1rem;
+          width: 100%;
+        }
+        .active{
+          outline: 3px solid #000;
+        }
+        .error{
+          background-color: #b21f2d !important;
+          color: white !important;
+        }
+        .success{
+          background-color: #28a745 !important;
+          color: #fff !important;
+        }
+        .not-responded{
+          background-color: #2070a2 !important;
+          color: #fff !important;
+        }
+      }
+
+    }
+  }
+  .progression-card-statistics{
+    .statistics-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .statistics-card{
+        @extend .card;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 45%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1.5rem;
+        padding: 2.75rem;
+        text-align: center;
+        h5{
+          font-size: 1.8rem;
+          font-weight: 300;
+          line-height: 2rem;
+        }
+        p{
+          font-weight: 600;
+          font-size: .85rem;
+          line-height: 1.3rem;
+          font-family: Nunito,sans-serif;
+        }
+      }
+    }
+  }
+}
+
+h2{
+  font-size: 1.4rem;
+  margin-bottom: .5rem;
+}
+
+.card{
+  background: #fff;
+  border-radius: .75rem;
+  box-shadow: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+  padding: 1.75rem;
+}

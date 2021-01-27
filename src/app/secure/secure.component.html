@@ -1,0 +1,29 @@
+<div>
+  <app-header (toggled)="drawer.toggle()"></app-header>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav  #drawer class="sidenav" fixedInViewport [opened]="true" mode="side">
+      <mat-nav-list>
+        <ng-template ngFor let-item [ngForOf]="menuItems" >
+          <ng-template [ngIf]="item.list">
+            <app-menu-item-list [items]="item" ></app-menu-item-list>
+          </ng-template>
+          <ng-template [ngIf]="!(item.list)">
+            <app-menu-item [item]="item.header" ></app-menu-item>
+          </ng-template>
+        </ng-template>
+
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="sidenav-content">
+        <app-path></app-path>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+
+</div>
+
+
+

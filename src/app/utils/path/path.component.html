@@ -1,0 +1,17 @@
+<div class="path-container">
+  <h1>{{title}}</h1>
+  <nav class="path-nav">
+      <a href="{{getFirst().link}}" class="path-nav-item">
+        <div class="item-icon">
+          <mat-icon>{{getFirst().icon}}</mat-icon> <span>{{getFirst().title}}</span>
+        </div>
+      </a>
+
+      <a *ngFor="let p of path" href="{{p.link}}" class="path-nav-item">
+          {{p.label}}
+      </a>
+      <p  class="path-nav-item">
+        {{ current.label }}
+      </p>
+  </nav>
+</div>

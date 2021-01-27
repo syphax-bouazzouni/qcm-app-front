@@ -1,0 +1,21 @@
+<div class="quiz-question-propositions">
+  <div class="quiz-question">
+    {{test.test.question}}
+  </div>
+  <div class="quiz-question-source">
+    {{test.test.source}}
+  </div>
+  <hr>
+  <ul class="quiz-propositions" >
+    <app-quiz-proposition  *ngFor="let p of test.test.propositions" [index]="p.index"
+                           [clearObserver]="clearEvent.asObservable()"
+                           [verifyObserver]="verifyEvent.asObservable()"
+                           [isResponse]="p.isResponse"
+                           (checked)="updateCheckedResponses(p.index,$event)"
+                           [state] = "getPropositionState(p.index,p.isResponse)"
+                           [blocked]="isBlocked(p.index)"
+    >
+     {{p.proposition}}
+    </app-quiz-proposition>
+  </ul>
+</div>

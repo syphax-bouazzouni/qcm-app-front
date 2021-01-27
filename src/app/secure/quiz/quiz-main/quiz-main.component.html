@@ -1,0 +1,32 @@
+<div class="quiz-main">
+  <div class="quiz-main-card">
+    <div class="quiz-main-header">
+      <div class="quiz-main-header-title">
+        <h5>
+          {{quiz.label}} - Q.<span>{{currentIndex+1}}</span> / {{quiz.nbQuestions}}
+        </h5>
+        <span class="question-type">
+          {{questionType}}
+        </span>
+      </div>
+      <div class="quiz-main-header-right">
+        <div class="quiz-main-header-controllers">
+          <button title="Ajouter a une playlist"><mat-icon>add_outline</mat-icon></button>
+          <button title="Signaler la question"><mat-icon>flag_outline</mat-icon></button>
+        </div>
+        <app-quiz-timer></app-quiz-timer>
+      </div>
+
+    </div>
+    <div class="quiz-main-body">
+       <app-quiz-test [test]="currentTest" (updated)="onTestUpdate('update')"></app-quiz-test>
+    </div>
+  </div>
+  <div class="quiz-main-btn-group">
+    <button class="btn-remove" (click)="clear()">Effacer la réponse</button>
+    <button  [ngClass]="(!responded? 'btn-verify':(isEnd?'btn-end':'btn-next'))"  (click)="processTest()">
+      {{!responded?'Vérifier la réponse':(isEnd?'Terminer':'Suivant')}}
+    </button>
+  </div>
+
+</div>

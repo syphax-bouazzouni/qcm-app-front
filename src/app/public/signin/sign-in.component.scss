@@ -1,0 +1,36 @@
+@import "src/app/vars";
+
+
+
+
+.login-welcome{
+  text-align: center;
+  margin: 0.75rem 0;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  .d-flex {
+    display: flex !important;
+    justify-content: flex-end;
+  }
+}
+.btn-outline-primary {
+  color: #145388;
+  border-color: #145388!important;
+  background-color: transparent;
+  border: 1px solid;
+  transition: all .15s ease-in-out;
+  &:hover{
+    color: #fff;
+    background-color: #145388;
+    border-color: #145388;
+  }
+}
+.btn-round {
+  border-radius: 50px;
+  outline: initial!important;
+  box-shadow: none!important;
+  font-size: .8rem;
+}
